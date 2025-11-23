@@ -52,6 +52,23 @@ const projects = [
     link: "https://github.com/praneethreddie/promtly.ai",
     web: "https://timely-moonbeam-c9de7b.netlify.app/",
   },
+  // --- New project "realtime-webrtc-vlm" ---
+  {
+    name: "realtime-webrtc-vlm",
+    description:
+      "A real-time object detection system that streams video from your phone to a browser and overlays detection results using WebRTC technology.",
+    tech: ["WebRTC", "Python", "Docker", "JavaScript"],
+    link: "https://github.com/praneethreddie/realtime-webrtc-vlm",
+  },
+  // --- New project "admybrand" ---
+  {
+    name: "admybrand",
+    description:
+      "A complete landing page showcasing the ADmyBRAND AI Suite - an AI-powered marketing platform that helps businesses create content, analyze campaigns, and maintain brand consistency.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    link: "https://github.com/praneethreddie/admybrand",
+    web: "https://admybranddeploy.vercel.app/",
+  },
 ];
 
 export default function ProjectsSection() {

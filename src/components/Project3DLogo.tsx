@@ -171,6 +171,82 @@ function UnhmogleLogo() {
   );
 }
 
+// Real-time WebRTC VLM: Eye/Camera scanning icon
+function WebRTCVLMLogo() {
+  return (
+    <svg
+      width={64}
+      height={64}
+      viewBox="0 0 64 64"
+      aria-label="WebRTC VLM Logo"
+      fill="none"
+    >
+      {/* Eye shape */}
+      <path
+        d="M12 32 C20 18, 44 18, 52 32 C44 46, 20 46, 12 32 Z"
+        fill="#f0f9ff"
+        stroke="#0284c7"
+        strokeWidth="2"
+      />
+      {/* Iris/Lens */}
+      <circle cx="32" cy="32" r="8" fill="#0ea5e9" stroke="#0369a1" strokeWidth="2" />
+      {/* Pupil */}
+      <circle cx="32" cy="32" r="3" fill="#0c4a6e" />
+      {/* Scanning beam */}
+      <path
+        d="M20 20 L44 20"
+        stroke="#ef4444"
+        strokeWidth="2"
+        strokeLinecap="round"
+        opacity="0.8"
+      >
+        <animate attributeName="d" values="M20 20 L44 20; M20 44 L44 44; M20 20 L44 20" dur="2s" repeatCount="indefinite" />
+      </path>
+      {/* Connection nodes */}
+      <circle cx="12" cy="32" r="2" fill="#22c55e" />
+      <circle cx="52" cy="32" r="2" fill="#22c55e" />
+      {/* Personal accent */}
+      <PersonalAccent color="#38bdf8" />
+    </svg>
+  );
+}
+
+// ADmyBRAND: Stylized A with chart/growth elements
+function AdmybrandLogo() {
+  return (
+    <svg
+      width={64}
+      height={64}
+      viewBox="0 0 64 64"
+      aria-label="ADmyBRAND Logo"
+      fill="none"
+    >
+      {/* Background circle */}
+      <circle cx="32" cy="32" r="24" fill="#fdf4ff" stroke="#e879f9" strokeWidth="1.5" />
+      {/* Stylized 'A' shape */}
+      <path
+        d="M32 16 L18 48 L24 48 L27 40 L37 40 L40 48 L46 48 L32 16 Z"
+        fill="#d946ef"
+        stroke="#c026d3"
+        strokeWidth="1.5"
+      />
+      {/* Crossbar as a rising chart */}
+      <path
+        d="M27 40 L32 35 L37 40"
+        stroke="#fff"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      {/* Growth indicator */}
+      <circle cx="44" cy="24" r="3" fill="#22c55e" />
+      <path d="M44 24 L38 30" stroke="#22c55e" strokeWidth="1.5" strokeDasharray="2,2" />
+      {/* Personal accent */}
+      <PersonalAccent color="#f0abfc" />
+    </svg>
+  );
+}
+
 /**
  * Main logo switcher for projects. Falls back to UplyftLogo.
  */
@@ -182,6 +258,8 @@ export default function Project3DLogo({ project }: { project: string }) {
   else if (project === "aircursor") Logo = <AircursorLogo />;
   else if (project === "Dreamer") Logo = <DreamerLogo />;
   else if (project.toLowerCase() === "promtly ai") Logo = <BotLogo />;
+  else if (project === "realtime-webrtc-vlm") Logo = <WebRTCVLMLogo />;
+  else if (project === "admybrand") Logo = <AdmybrandLogo />;
   else Logo = <UplyftLogo />;
 
   return (
