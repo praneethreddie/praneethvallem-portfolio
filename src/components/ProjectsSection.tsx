@@ -20,11 +20,12 @@ const getShortDescription = (desc: string, length = 90) => {
 // User's actual open-source projects from https://github.com/praneethreddie
 const projects = [
   {
-    name: "uplyft",
+    name: "unhmegle",
     description:
-      "A sophisticated e-commerce chatbot with interactive AI recommendations that asks users about their preferences to provide personalized product suggestions",
-    tech: ["Python", "JavaScript", "HTML", "CSS", "Batchfile"],
-    link: "https://github.com/praneethreddie/uplyft",
+      "A modern, real-time video chat application inspired by Omegle, built with React, Node.js, and WebRTC. Talk to strangers, make friends.",
+    tech: ["React", "Node.js", "WebRTC", "JavaScript", "CSS", "HTML"],
+    link: "https://github.com/praneethreddie/unhmegle",
+    web: "https://uhmegle-e1kz.onrender.com/",
   },
   {
     name: "aircursor",
@@ -88,14 +89,14 @@ export default function ProjectsSection() {
                   <Project3DLogo project={proj.name} />
                   <div className="flex flex-col flex-1 min-w-0">
                     <div className="flex items-center gap-2">
-                      <Folder className="text-accent w-5 h-5" aria-hidden />
+                      <Folder className="text-foreground w-5 h-5" aria-hidden />
                       <h3 className="font-semibold text-lg md:text-xl text-foreground group-hover:text-foreground transition-colors truncate">
                         {proj.name}
                       </h3>
                     </div>
                     <div className="flex flex-wrap gap-2 text-xs mt-2">
                       {proj.tech.map((t) => (
-                        <span key={t} class Name="bg-secondary py-1 px-2 rounded font-medium text-secondary-foreground">{t}</span>
+                        <span key={t} className="bg-primary/10 py-1 px-2 rounded font-medium text-primary">{t}</span>
                       ))}
                     </div>
                   </div>
@@ -107,7 +108,7 @@ export default function ProjectsSection() {
                   </span>
                   {proj.description.length > 90 && (
                     <button
-                      className="mt-1 text-accent hover:underline hover-scale text-xs flex gap-1 items-center"
+                      className="mt-1 text-foreground hover:underline hover-scale text-xs flex gap-1 items-center font-medium"
                       onClick={() =>
                         setExpanded(isExpanded ? null : proj.name)
                       }
@@ -141,7 +142,7 @@ export default function ProjectsSection() {
                   )}
                   <a
                     href={proj.link}
-                    className="flex items-center text-accent hover:underline underline-offset-2 font-medium text-sm"
+                    className="flex items-center text-foreground hover:underline underline-offset-2 font-medium text-sm"
                     target="_blank"
                     rel="noopener noreferrer"
                     tabIndex={0}
