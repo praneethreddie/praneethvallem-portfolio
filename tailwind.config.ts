@@ -1,5 +1,8 @@
 
 import type { Config } from "tailwindcss";
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
 
 export default {
   darkMode: ["class"],
@@ -32,10 +35,7 @@ export default {
         "secondary-foreground": "hsl(var(--secondary-foreground))",
         muted: "hsl(var(--muted))",
         "muted-foreground": "hsl(var(--muted-foreground))",
-        accent: {
-          DEFAULT: "#6366f1", // indigo-500
-          ...{}, // Keep legacy
-        },
+        accent: "hsl(var(--accent))",
         "accent-foreground": "hsl(var(--accent-foreground))",
         destructive: "hsl(var(--destructive))",
         "destructive-foreground": "hsl(var(--destructive-foreground))",
@@ -52,17 +52,39 @@ export default {
         "sidebar-border": "hsl(var(--sidebar-border))",
         "sidebar-ring": "hsl(var(--sidebar-ring))",
       },
+
+      animation: {
+        "fade-in-up": "fade-in-up 0.7s cubic-bezier(.4,0,.2,1) both",
+        aurora: "aurora 60s linear infinite",
+      },
       keyframes: {
         "fade-in-up": {
           "0%": { opacity: "0", transform: "translateY(32px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
+        aurora: {
+          from: {
+            backgroundPosition: "50% 50%, 50% 50%",
+          },
+          to: {
+            backgroundPosition: "350% 50%, 350% 50%",
+          },
+        },
       },
-      animation: {
-        "fade-in-up": "fade-in-up 0.7s cubic-bezier(.4,0,.2,1) both",
-      }
     }
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), addVariablesForColors],
 } satisfies Config;
+
+// This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
+function addVariablesForColors({ addBase, theme }: any) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+
+  addBase({
+    ":root": newVars,
+  });
+}
 

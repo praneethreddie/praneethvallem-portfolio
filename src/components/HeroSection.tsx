@@ -28,7 +28,7 @@ export default function HeroSection() {
           <DialogTrigger asChild>
             <Button
               variant="outline"
-              className="border-accent text-accent font-medium shadow hover:bg-accent/10 transition hover:scale-105"
+              className="border-accent text-accent font-medium shadow bg-accent/10 hover:bg-accent/20 transition hover:scale-105"
               aria-label="Open Resume"
             >
               Resume
