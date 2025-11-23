@@ -13,7 +13,7 @@ const profilePicUrl =
   "/lovable-uploads/f41ea533-789d-477a-b648-e00a620ee382.png";
 
 const RESUME_URL =
-  "https://drive.google.com/file/d/1-V8JoScKL1nuRzj9hh42UX6Dd-wE0iPg/view?usp=drivesdk";
+  "https://drive.google.com/file/d/1smPHomWOj9TjDg9NdnLdiPi9W0nPK6Zy/view?usp=sharing";
 
 export default function HeroSection() {
   // --- Scroll reveal for CTA and icons
@@ -86,12 +86,12 @@ export default function HeroSection() {
                     <Linkedin className="w-4 h-4 min-w-[16px]" />
                     <span className="font-semibold">LinkedIn:</span>
                     <a
-                      href="https://www.linkedin.com/in/praneeth-reddy-73aa07243"
+                      href="https://www.linkedin.com/in/praneethreddyvallem"
                       target="_blank"
                       rel="noopener"
                       className="ml-1 text-foreground underline break-all transition-colors hover:text-foreground/80"
                     >
-                      www.linkedin.com/in/praneeth-reddy-73aa07243
+                      www.linkedin.com/in/praneethreddyvallem
                     </a>
                   </div>
                   <div className="flex items-center gap-2 hover-scale cursor-pointer">
@@ -125,7 +125,7 @@ export default function HeroSection() {
                     <span className="font-medium">
                       BE in CSE (Artificial Intelligence &amp; Machine Learning)
                     </span>, Jawaharlal Nehru Technological University Hyderabad, 2022 - 2026
-                    <div className="ml-4 text-muted-foreground">CGPA: 7.5 (up to third semester)</div>
+                    <div className="ml-4 text-muted-foreground">CGPA: 7 (up to 6th semester)</div>
                   </li>
                   <li>
                     <span className="font-medium">Higher Secondary</span>, Narayana Junior College, Hyderabad, 2020 - 2022
@@ -145,6 +145,7 @@ export default function HeroSection() {
                   <li>Introduction to Data Science from Cisco Technologies (Mar 2024)</li>
                   <li>Introduction to Artificial Intelligence from IBM Skills Build (Dec 2023)</li>
                   <li>Amazon Web Services from Udemy (Jan 2024)</li>
+                  <li>Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate (2025)</li>
                 </ul>
               </section>
               {/* KEY SKILLS */}
@@ -157,6 +158,7 @@ export default function HeroSection() {
                   <li className="hover-scale transition-all">Adaptability</li>
                   <li className="hover-scale transition-all">Communication skills</li>
                   <li className="hover-scale transition-all">Teamwork and Collaboration</li>
+                  <li className="hover-scale transition-all">Familiar with modern Ai Tools</li>
                 </ul>
               </section>
               {/* EXTRA CURRICULAR ACTIVITIES */}
@@ -172,7 +174,7 @@ export default function HeroSection() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-1 text-pretty">
                   <div>
                     <span className="font-semibold">Residing Address:</span>{" "}
-                    15-118, road no. 4, TNR Sulakshana Apartments, Hasthinapuram, Hyderabad.
+                    Flat no. 202 sai ragavendra arcade,Lb nagar, Hyderabad
                   </div>
                   <div>
                     <span className="font-semibold">Date of Birth:</span> 1st January 2005
@@ -226,7 +228,7 @@ export default function HeroSection() {
               <Github className="w-6 h-6" />
             </a>
             <a
-              href="https://www.linkedin.com/in/praneeth-reddy-73aa07243"
+              href="https://www.linkedin.com/in/praneethreddyvallem"
               target="_blank"
               rel="noopener"
               aria-label="LinkedIn"
