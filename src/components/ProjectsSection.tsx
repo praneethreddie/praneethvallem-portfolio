@@ -89,6 +89,7 @@ export default function ProjectsSection() {
     description: proj.description,
     link: proj.link,
     web: proj.web,
+    tech: proj.tech,
   }));
 
   return (

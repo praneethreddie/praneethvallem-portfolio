@@ -31,6 +31,7 @@ export interface ImageData {
     description?: string;
     link?: string; // project repo link
     web?: string; // live demo link
+    tech?: string[]; // tech stack
 }
 
 export interface SphereImageGridProps {
@@ -297,36 +298,68 @@ const SphereImageGrid: React.FC<SphereImageGridProps> = ({
     const renderSpotlightModal = () => {
         if (!selectedImage) return null;
         return (
-            <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/30" onClick={() => setSelectedImage(null)} style={{ animation: 'fadeIn 0.3s ease-out' }}>
-                <div className="bg-white rounded-xl max-w-md w-full overflow-hidden" onClick={e => e.stopPropagation()} style={{ animation: 'scaleIn 0.3s ease-out' }}>
-                    <div className="relative aspect-square flex items-center justify-center bg-gray-50">
+            <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm" onClick={() => setSelectedImage(null)} style={{ animation: 'fadeIn 0.3s ease-out' }}>
+                <div
+                    className="bg-background/95 border border-border/50 rounded-2xl max-w-lg w-full overflow-hidden shadow-2xl transform transition-all"
+                    onClick={e => e.stopPropagation()}
+                    style={{ animation: 'scaleIn 0.3s ease-out' }}
+                >
+                    <div className="relative h-48 bg-muted/30 flex items-center justify-center border-b border-border/50">
                         {selectedImage.component ? (
-                            <div className="w-2/3 h-2/3">{selectedImage.component}</div>
+                            <div className="w-32 h-32 transform hover:scale-110 transition-transform duration-500">{selectedImage.component}</div>
                         ) : (
                             <img src={selectedImage.src} alt={selectedImage.alt} className="w-full h-full object-cover" />
                         )}
-                        <button onClick={() => setSelectedImage(null)} className="absolute top-2 right-2 w-8 h-8 bg-black bg-opacity-50 rounded-full text-white flex items-center justify-center hover:bg-opacity-70 transition-all cursor-pointer">
-                            <X size={16} />
+                        <button
+                            onClick={() => setSelectedImage(null)}
+                            className="absolute top-4 right-4 p-2 bg-background/80 hover:bg-background rounded-full text-foreground/70 hover:text-foreground transition-colors border border-border/50 shadow-sm"
+                        >
+                            <X size={18} />
                         </button>
                     </div>
-                    {(selectedImage.title || selectedImage.description) && (
-                        <div className="p-6">
-                            {selectedImage.title && <h3 className="text-xl font-bold mb-2">{selectedImage.title}</h3>}
-                            {selectedImage.description && <p className="text-gray-600">{selectedImage.description}</p>}
-                            <div className="flex gap-4 mt-4">
-                                {selectedImage.web && (
-                                    <a href={selectedImage.web} target="_blank" rel="noopener noreferrer" className="flex items-center text-primary hover:underline underline-offset-2 font-medium">
-                                        <LinkIcon className="w-4 h-4 mr-1" /> Live Demo
-                                    </a>
-                                )}
-                                {selectedImage.link && (
-                                    <a href={selectedImage.link} target="_blank" rel="noopener noreferrer" className="flex items-center text-primary hover:underline underline-offset-2 font-medium">
-                                        <LinkIcon className="w-4 h-4 mr-1" /> View Project
-                                    </a>
-                                )}
-                            </div>
+
+                    <div className="p-6 space-y-4">
+                        <div>
+                            <h3 className="text-2xl font-bold text-foreground mb-2">{selectedImage.title}</h3>
+                            {selectedImage.tech && (
+                                <div className="flex flex-wrap gap-2 mb-3">
+                                    {selectedImage.tech.map((t, i) => (
+                                        <span key={i} className="px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20">
+                                            {t}
+                                        </span>
+                                    ))}
+                                </div>
+                            )}
+                            {selectedImage.description && (
+                                <p className="text-muted-foreground leading-relaxed text-sm">
+                                    {selectedImage.description}
+                                </p>
+                            )}
                         </div>
-                    )}
+
+                        <div className="flex gap-3 pt-2">
+                            {selectedImage.web && (
+                                <a
+                                    href={selectedImage.web}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex-1 inline-flex justify-center items-center px-4 py-2.5 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors shadow-sm text-sm"
+                                >
+                                    <LinkIcon className="w-4 h-4 mr-2" /> Live Demo
+                                </a>
+                            )}
+                            {selectedImage.link && (
+                                <a
+                                    href={selectedImage.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={`flex-1 inline-flex justify-center items-center px-4 py-2.5 rounded-lg border border-input bg-background hover:bg-accent hover:text-accent-foreground font-medium transition-colors text-sm ${!selectedImage.web ? 'w-full' : ''}`}
+                                >
+                                    <LinkIcon className="w-4 h-4 mr-2" /> View Code
+                                </a>
+                            )}
+                        </div>
+                    </div>
                 </div>
             </div>
         );
