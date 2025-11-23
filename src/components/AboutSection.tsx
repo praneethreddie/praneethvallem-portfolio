@@ -17,7 +17,7 @@ export default function AboutSection() {
 
         {/* Technical Skills Section */}
         <div className="mb-1 flex items-center gap-1 sm:gap-2">
-          <h3 className="text-lg sm:text-xl font-semibold font-inter text-foreground tracking-tight hover:text-accent transition-colors cursor-pointer">Technical Skills</h3>
+          <h3 className="text-2xl sm:text-3xl font-bold font-inter hover:underline hover:text-accent cursor-pointer transition-colors">Technical Skills</h3>
         </div>
 
         <FeaturesSectionWithHoverEffects />

@@ -209,7 +209,7 @@ export default function HeroSection() {
         <div className="flex flex-col xs:flex-row gap-3 xs:gap-4 justify-center items-center w-full">
           <a
             href="mailto:praneethreddyvallem@gmail.com"
-            className="inline-flex items-center w-full xs:w-auto justify-center px-4 sm:px-6 py-2 bg-accent text-white rounded-lg font-semibold shadow hover:scale-110 focus-visible:ring-2 ring-accent/40 transition-transform animate-fade-in cursor-pointer"
+            className="inline-flex items-center w-full xs:w-auto justify-center px-4 sm:px-6 py-2 bg-primary dark:bg-accent text-primary-foreground dark:text-white rounded-lg font-semibold shadow hover:scale-110 focus-visible:ring-2 ring-primary/40 dark:ring-accent/40 transition-transform animate-fade-in cursor-pointer"
             tabIndex={0}
           >
             <Mail className="w-5 h-5 mr-2 animate-pulse" />
