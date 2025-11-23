@@ -2,7 +2,7 @@ import AnimatedSection from "./AnimatedSection";
 import SphereImageGrid from "./SphereImageGrid";
 import { Folder, Link as LinkIcon, Plus, Minus } from "lucide-react";
 import Project3DLogo from "./Project3DLogo";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // Unsplash images based on the description/tech
 const projectLogos: { [key: string]: string } = {
@@ -75,6 +75,18 @@ export default function ProjectsSection() {
   // State to manage which project is "expanded"
   const [expanded, setExpanded] = useState<string | null>(null);
   const [viewMode, setViewMode] = useState<'sphere' | 'grid'>('sphere');
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect mobile screen size
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   // Create a duplicated list for the sphere to make it look full (approx 40 items)
   const sphereProjects = Array(10).fill(projects).flat();
@@ -131,7 +143,12 @@ export default function ProjectsSection() {
         {/* Sphere View */}
         {viewMode === 'sphere' && (
           <div className="flex justify-center mb-12 animate-fade-in">
-            <SphereImageGrid images={projectImages} containerSize={600} sphereRadius={280} autoRotate={true} />
+            <SphereImageGrid
+              images={projectImages}
+              containerSize={isMobile ? 350 : 600}
+              sphereRadius={isMobile ? 160 : 280}
+              autoRotate={true}
+            />
           </div>
         )}
 
