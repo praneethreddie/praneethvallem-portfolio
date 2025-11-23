@@ -125,7 +125,7 @@ function BotLogo() {
       fill="none"
     >
       {/* Head */}
-      <rect x="12" y="18" width="40" height="28" rx="14" fill="#38bdf8" stroke="#2563eb" strokeWidth="2"/>
+      <rect x="12" y="18" width="40" height="28" rx="14" fill="#38bdf8" stroke="#2563eb" strokeWidth="2" />
       {/* Eyes */}
       <circle cx="24" cy="32" r="4" fill="#fff" />
       <circle cx="40" cy="32" r="4" fill="#fff" />
@@ -143,13 +143,42 @@ function BotLogo() {
   );
 }
 
+// Unhmegle: Video camera with connection dots
+function UnhmogleLogo() {
+  return (
+    <svg
+      width={64}
+      height={64}
+      viewBox="0 0 64 64"
+      aria-label="Unhmegle Logo"
+      fill="none"
+    >
+      {/* Camera body */}
+      <rect x="14" y="22" width="32" height="20" rx="4" fill="#ef4444" stroke="#dc2626" strokeWidth="2" />
+      {/* Lens */}
+      <circle cx="30" cy="32" r="6" fill="#1e293b" stroke="#0f172a" strokeWidth="2" />
+      <circle cx="30" cy="32" r="3" fill="#475569" />
+      {/* Recording indicator */}
+      <circle cx="40" cy="26" r="2" fill="#fbbf24" />
+      {/* Connection dots (representing strangers connecting) */}
+      <circle cx="18" cy="14" r="3" fill="#06b6d4" />
+      <circle cx="46" cy="14" r="3" fill="#a855f7" />
+      <path d="M21 15 L28 22" stroke="#94a3b8" strokeWidth="1.5" strokeDasharray="2,2" />
+      <path d="M43 15 L36 22" stroke="#94a3b8" strokeWidth="1.5" strokeDasharray="2,2" />
+      {/* Personal accent */}
+      <PersonalAccent color="#f87171" />
+    </svg>
+  );
+}
+
 /**
  * Main logo switcher for projects. Falls back to UplyftLogo.
  */
 export default function Project3DLogo({ project }: { project: string }) {
   let Logo: React.ReactNode;
 
-  if (project === "uplyft") Logo = <UplyftLogo />;
+  if (project === "unhmegle") Logo = <UnhmogleLogo />;
+  else if (project === "uplyft") Logo = <UplyftLogo />;
   else if (project === "aircursor") Logo = <AircursorLogo />;
   else if (project === "Dreamer") Logo = <DreamerLogo />;
   else if (project.toLowerCase() === "promtly ai") Logo = <BotLogo />;

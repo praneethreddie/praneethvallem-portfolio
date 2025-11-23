@@ -22,7 +22,7 @@ const Navbar = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className="hover:text-accent hover:scale-110 transition-all px-2 py-1 font-medium text-base md:text-lg focus-visible:outline-2 focus-visible:rounded cursor-pointer"
+                className="hover:text-primary hover:scale-110 transition-all px-2 py-1 font-medium text-base md:text-lg focus-visible:outline-2 focus-visible:rounded cursor-pointer"
                 tabIndex={0}
               >
                 {link.label}
