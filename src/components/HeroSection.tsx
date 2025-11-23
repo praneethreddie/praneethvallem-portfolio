@@ -20,7 +20,7 @@ export default function HeroSection() {
   return (
     <AnimatedSection
       id="home"
-      className="w-full pt-8 sm:pt-12 pb-12 sm:pb-16 flex flex-col items-center min-h-[40vh] bg-gradient-to-b from-accent/5 via-transparent to-transparent relative"
+      className="w-full pt-8 sm:pt-32 pb-12 sm:pb-16 flex flex-col items-center min-h-[40vh] bg-gradient-to-b from-accent/5 via-transparent to-transparent relative"
     >
       {/* Resume Button Top Right */}
       <div className="absolute top-4 right-3 sm:top-5 sm:right-5 z-10">
