@@ -114,7 +114,7 @@ export default function ContactSection() {
           />
           <Button
             type="submit"
-            className="inline-flex justify-center items-center px-3 sm:px-6 py-2 bg-accent text-white rounded-lg font-semibold shadow hover:scale-110 focus-visible:ring-2 ring-accent transition-transform duration-200 animate-fade-in text-sm sm:text-base"
+            className="inline-flex justify-center items-center px-3 sm:px-6 py-2 bg-accent text-accent-foreground rounded-lg font-semibold shadow hover:scale-110 focus-visible:ring-2 ring-accent transition-transform duration-200 animate-fade-in text-sm sm:text-base"
           >
             Send Message
           </Button>

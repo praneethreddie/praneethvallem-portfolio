@@ -28,7 +28,7 @@ export default function HeroSection() {
           <DialogTrigger asChild>
             <Button
               variant="outline"
-              className="border-accent text-accent font-medium shadow bg-accent/10 hover:bg-accent/20 transition hover:scale-105"
+              className="border-foreground text-foreground font-medium shadow bg-accent/10 hover:bg-accent/20 transition hover:scale-105"
               aria-label="Open Resume"
             >
               Resume
@@ -37,7 +37,7 @@ export default function HeroSection() {
           <DialogContent className="max-w-2xl w-full">
             <DialogHeader className="flex flex-col items-center gap-2">
               <div className="flex flex-col md:flex-row md:items-center md:justify-between w-full">
-                <DialogTitle className="text-accent text-2xl font-bold mb-2 text-center w-full md:w-auto">
+                <DialogTitle className="text-foreground text-2xl font-bold mb-2 text-center w-full md:w-auto">
                   Resume
                 </DialogTitle>
                 <a
@@ -49,7 +49,7 @@ export default function HeroSection() {
                 >
                   <Button
                     variant="secondary"
-                    className="flex items-center gap-2 text-accent font-semibold border-accent border hover:bg-accent/10 hover:text-background transition hover:scale-105"
+                    className="flex items-center gap-2 text-foreground font-semibold border-foreground border hover:bg-accent/10 hover:text-background transition hover:scale-105"
                   >
                     <Download className="w-4 h-4" />
                     Download PDF
@@ -60,14 +60,14 @@ export default function HeroSection() {
             <div className="px-2 pb-2 max-h-[60vh] overflow-y-auto font-inter text-[15px] text-foreground space-y-7 text-left">
               {/* CONTACT */}
               <section className="space-y-1 animate-fade-in">
-                <h2 className="text-accent font-semibold mb-1 text-lg">Contact</h2>
+                <h2 className="text-foreground font-semibold mb-1 text-lg">Contact</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-1">
                   <div className="flex items-center gap-2 hover-scale cursor-pointer">
                     <Mail className="w-4 h-4 min-w-[16px]" />
                     <span className="font-semibold">Email:</span>
                     <a
                       href="mailto:Praneethreddyvallem@gmail.com"
-                      className="ml-1 text-accent underline break-all transition-colors hover:text-accent/80" tabIndex={0}
+                      className="ml-1 text-foreground underline break-all transition-colors hover:text-foreground/80" tabIndex={0}
                     >
                       Praneethreddyvallem@gmail.com
                     </a>
@@ -77,7 +77,7 @@ export default function HeroSection() {
                     <span className="font-semibold">Mobile:</span>
                     <a
                       href="tel:+918096008301"
-                      className="ml-1 text-accent underline transition-colors hover:text-accent/80"
+                      className="ml-1 text-foreground underline transition-colors hover:text-foreground/80"
                     >
                       +91 8096008301
                     </a>
@@ -89,7 +89,7 @@ export default function HeroSection() {
                       href="https://www.linkedin.com/in/praneeth-reddy-73aa07243"
                       target="_blank"
                       rel="noopener"
-                      className="ml-1 text-accent underline break-all transition-colors hover:text-accent/80"
+                      className="ml-1 text-foreground underline break-all transition-colors hover:text-foreground/80"
                     >
                       www.linkedin.com/in/praneeth-reddy-73aa07243
                     </a>
@@ -101,7 +101,7 @@ export default function HeroSection() {
                       href="https://wa.me/918096008301"
                       target="_blank"
                       rel="noopener"
-                      className="ml-1 text-accent underline transition-colors hover:text-accent/80"
+                      className="ml-1 text-foreground underline transition-colors hover:text-foreground/80"
                     >
                       91 8096008301
                     </a>
@@ -110,7 +110,7 @@ export default function HeroSection() {
               </section>
               {/* OBJECTIVE */}
               <section className="animate-fade-in">
-                <h2 className="text-accent font-semibold mb-1 text-lg">Objective</h2>
+                <h2 className="text-foreground font-semibold mb-1 text-lg">Objective</h2>
                 <p className="text-pretty leading-relaxed">
                   Motivated and detail-oriented B.Tech student seeking an opportunity to apply and enhance programming skills in a professional environment.
                   Committed to contributing to the success of a dynamic organization while gaining valuable industry experience.
@@ -119,7 +119,7 @@ export default function HeroSection() {
               </section>
               {/* ACADEMIC PROFILE */}
               <section className="animate-fade-in space-y-2">
-                <h2 className="text-accent font-semibold mb-1 text-lg">Academic Profile</h2>
+                <h2 className="text-foreground font-semibold mb-1 text-lg">Academic Profile</h2>
                 <ul className="list-disc list-inside space-y-2 pl-4">
                   <li>
                     <span className="font-medium">
@@ -139,7 +139,7 @@ export default function HeroSection() {
               </section>
               {/* CERTIFICATIONS */}
               <section className="animate-fade-in space-y-1">
-                <h2 className="text-accent font-semibold mb-1 text-lg">Certifications</h2>
+                <h2 className="text-foreground font-semibold mb-1 text-lg">Certifications</h2>
                 <ul className="list-disc list-inside space-y-1 pl-4">
                   <li>Introduction to Python from Cisco Technologies (Sep 2023)</li>
                   <li>Introduction to Data Science from Cisco Technologies (Mar 2024)</li>
@@ -149,7 +149,7 @@ export default function HeroSection() {
               </section>
               {/* KEY SKILLS */}
               <section className="animate-fade-in space-y-1">
-                <h2 className="text-accent font-semibold mb-1 text-lg">Key Skills</h2>
+                <h2 className="text-foreground font-semibold mb-1 text-lg">Key Skills</h2>
                 <ul className="list-disc list-inside space-y-1 pl-4">
                   <li className="hover-scale transition-all">Programming Languages: C, Python</li>
                   <li className="hover-scale transition-all">Web Development (HTML, CSS, JavaScript)</li>
@@ -161,14 +161,14 @@ export default function HeroSection() {
               </section>
               {/* EXTRA CURRICULAR ACTIVITIES */}
               <section className="animate-fade-in">
-                <h2 className="text-accent font-semibold mb-1 text-lg">Extra Curricular Activities</h2>
+                <h2 className="text-foreground font-semibold mb-1 text-lg">Extra Curricular Activities</h2>
                 <ul className="list-disc list-inside pl-4">
                   <li className="hover-scale transition-all">Participated in District Level Skating Competition, March 2019</li>
                 </ul>
               </section>
               {/* PERSONAL INFORMATION (At the bottom) */}
               <section className="animate-fade-in">
-                <h2 className="text-accent font-semibold mb-1 text-lg">Personal Information</h2>
+                <h2 className="text-foreground font-semibold mb-1 text-lg">Personal Information</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-1 text-pretty">
                   <div>
                     <span className="font-semibold">Residing Address:</span>{" "}
@@ -201,10 +201,10 @@ export default function HeroSection() {
         />
         <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold font-inter mb-2 text-foreground text-center animate-fade-in-up transition-transform leading-tight px-2">
           Hi, I'm{" "}
-          <span className="text-accent hover:underline transition-all cursor-pointer">Praneeth Reddy</span>
+          <span className="text-foreground hover:underline transition-all cursor-pointer">Praneeth Reddy</span>
         </h1>
         <p className="max-w-screen-sm text-base xs:text-lg sm:text-xl text-muted-foreground text-center mb-6 animate-fade-in px-2">
-          I’m a <span className="font-semibold text-accent hover:underline cursor-pointer">Full-Stack Developer</span> &amp; <span className="font-semibold text-accent hover:underline cursor-pointer">AI Enthusiast</span> who uses AI and automation to solve real-world problems and boost productivity. Always on top of the latest tools and trends, I bring the future to my workflow.
+          I’m a <span className="font-semibold text-foreground hover:underline cursor-pointer">Full-Stack Developer</span> &amp; <span className="font-semibold text-foreground hover:underline cursor-pointer">AI Enthusiast</span> who uses AI and automation to solve real-world problems and boost productivity. Always on top of the latest tools and trends, I bring the future to my workflow.
         </p>
         <div className="flex flex-col xs:flex-row gap-3 xs:gap-4 justify-center items-center w-full">
           <a

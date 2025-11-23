@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-40 w-full bg-background/80 backdrop-blur border-b border-border">
       <div className="container flex items-center justify-between py-2 md:py-3 px-2 sm:px-4">
-        <div className="text-xl sm:text-2xl font-bold text-accent font-inter select-none">MyPortfolio</div>
+        <div className="text-xl sm:text-2xl font-bold text-foreground font-inter select-none">MyPortfolio</div>
         <div className="flex items-center gap-4">
           <div className="hidden md:flex gap-6 lg:gap-8">
             {navLinks.map(link => (

@@ -19,7 +19,7 @@ export default function ScrollToTopFAB() {
     <button
       aria-label="Scroll to top"
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      className="bg-accent text-white rounded-full shadow-lg p-3 animate-fade-in hover:scale-110 transition-transform focus-visible:ring-2 ring-white"
+      className="bg-accent text-accent-foreground rounded-full shadow-lg p-3 animate-fade-in hover:scale-110 transition-transform focus-visible:ring-2 ring-accent"
       tabIndex={0}
       style={{ boxShadow: "0 2px 12px 0 rgba(99,102,241,.17)" }}
     >

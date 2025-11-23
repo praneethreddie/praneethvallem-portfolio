@@ -89,13 +89,13 @@ export default function ProjectsSection() {
                   <div className="flex flex-col flex-1 min-w-0">
                     <div className="flex items-center gap-2">
                       <Folder className="text-accent w-5 h-5" aria-hidden />
-                      <h3 className="font-semibold text-lg md:text-xl text-foreground group-hover:text-accent transition-colors truncate">
+                      <h3 className="font-semibold text-lg md:text-xl text-foreground group-hover:text-foreground transition-colors truncate">
                         {proj.name}
                       </h3>
                     </div>
                     <div className="flex flex-wrap gap-2 text-xs mt-2">
                       {proj.tech.map((t) => (
-                        <span key={t} className="bg-accent/10 py-1 px-2 rounded font-medium text-accent">{t}</span>
+                        <span key={t} class Name="bg-secondary py-1 px-2 rounded font-medium text-secondary-foreground">{t}</span>
                       ))}
                     </div>
                   </div>
