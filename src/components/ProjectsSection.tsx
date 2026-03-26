@@ -17,6 +17,13 @@ const projects = [
     github: "https://github.com/praneethreddie/aircursor",
   },
   {
+    title: "git-matrix",
+    description: "Convert any text into GitHub contribution graph pixel art using backdated git commits.",
+    tech: ["JavaScript", "Git", "GitHub"],
+    github: "https://github.com/praneethreddie/git-matrix",
+    live: "https://git-matrix-tofc.vercel.app/",
+  },
+  {
     title: "Dreamer",
     description: "A dream interpretation tool that analyzes dreams using Google Gemini API and generates image prompts.",
     tech: ["JavaScript", "CSS", "Gemini API"],
